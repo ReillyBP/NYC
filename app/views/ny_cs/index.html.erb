@@ -1,0 +1,9 @@
+<h1>"Below is the weather for Nome, AK"</h1>
+<%@sunsets.each do |sunset, time| %>
+  <p>Sunset Time: <%= sunset %></p>
+  <p>Sunrise Time:<%= time %></p>
+  <% end %>
+  <%@forecasts.each do |forecast, day| %>
+  <p>Forecast: <%= forecast %></p>
+  <p>Temp:<%= temp %></p>
+  <%end %>
