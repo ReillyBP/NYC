@@ -1,9 +1,9 @@
-<h1>"Below is the weather for Nome, AK"</h1>
-<%@sunsets.each do |sunset, time| %>
-  <p>Sunset Time: <%= sunset %></p>
-  <p>Sunrise Time:<%= time %></p>
-  <% end %>
-  <%@forecasts.each do |forecast, day| %>
-  <p>Forecast: <%= forecast %></p>
-  <p>Temp:<%= temp %></p>
-  <%end %>
+<% @forecasts.each do |forecast|%>
+<p>Day: <%= forecast.day %></p>
+<p>Date: <%= forecast.date %></p>
+<p>Forecast: <%= forecast.text %></p>
+<p>High: <%= (forecast.high - 32) * 5/9 %> C, <%= forecast.high %> F</p>
+<p>Low: <%= (forecast.low - 32) * 5/9  %>C,<%= forecast.low %>F</p>
+<% end %>
+
+<p><img src="http://l.yimg.com/a/i/us/we/52/26.gif"></p>
